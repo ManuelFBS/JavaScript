@@ -11,15 +11,11 @@ const productos = [
 
 const esBarato = producto => producto.precio < 1000;
 const obtenerPrecio = productos.map(({ precio }) => precio);
-// const sumarDobles = (acumulador, numero) => {
-//         acumulador.push(numero * 2);
-//         return acumulador;
-// };
+
 const totalPreciosBaratos = (acumulador, precio) => {
         return acumulador += precio;
 }
-///// Corregir...
-// const precioTotalProductosBaratos = productos.filter(esBarato).map(obtenerPrecio).reduce(totalPreciosBaratos);
+
 const precioTotalProductosBaratos = productos.filter(esBarato).map(({ precio }) => precio).reduce(totalPreciosBaratos);
 
 console.log(precioTotalProductosBaratos);
