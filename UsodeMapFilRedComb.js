@@ -19,7 +19,7 @@ const totalPreciosBaratos = (acumulador, precio) => {
         return acumulador += precio;
 }
 ///// Corregir...
-const precioTotalProductosBaratos = productos.filter[esBarato].map(obtenerPrecio).reduce(totalPreciosBaratos);
-// const precioTotalProductosBaratos = productos.filter(esBarato);
+// const precioTotalProductosBaratos = productos.filter(esBarato).map(obtenerPrecio).reduce(totalPreciosBaratos);
+const precioTotalProductosBaratos = productos.filter(esBarato).map(({ precio }) => precio).reduce(totalPreciosBaratos);
 
 console.log(precioTotalProductosBaratos);
